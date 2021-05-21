@@ -25,6 +25,7 @@ Drink App
 - [GitHub Repo](#)
 - [Live Site](#)
 - [Heroku](#)
+- [Google Doc] (https://docs.google.com/document/d/1d1kRpaK1KqMWOh_f0vlHxn1eoHWlC_X0E5iuqlV_8LQ/edit?usp=sharing)
 
 ## Status & Updates:
 
