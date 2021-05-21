@@ -2,7 +2,7 @@
 
 ## Description:
 
-Drink App
+Drink App for Cocktails
 
 ## Demo:
 
