@@ -11,11 +11,9 @@ Note.init(
       primaryKey: true,
       autoIncrement: true,
     },
- 
     note_description: {
       type: DataTypes.STRING,
     },
-   
     user_id: {
       type: DataTypes.INTEGER,
       references: {
