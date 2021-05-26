@@ -1,10 +1,12 @@
-# 5-0-Clock-Drink-Generator
+# 5'O-Clock Drink Generator
 
 ## Description:
 
-Drink App
+Drink App for Cocktails
 
 ## Demo:
+
+[Mockup Pic](https://app.moqups.com/MpjDXCoXGg/view/page/ae973f342)
 
 #### Screenshot -
 
