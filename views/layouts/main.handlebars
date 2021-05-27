@@ -30,25 +30,23 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
+                    {{#if logged_in}}
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">My Account <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/profile">My Account <span class="sr-only">(current)</span></a>
                     </li>
+                    <button class="no-button" id="logout">logout</button>
+                    {{else}}
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/login">Login <span class="sr-only">(current)</span></a>
                     </li>
+                  {{/if}}
                 </ul>
             </div>
       </nav>
-
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
       
     </header>
+
+
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
       {{{ body }}}
