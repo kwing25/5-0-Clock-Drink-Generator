@@ -10,13 +10,36 @@
 </head>
 
 <body>
+
   <div class="flex-column justify-space-around">
+
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
+        <a href="/">5-O'clock Drink Generator </a>
       </h1>
+
+      {{!-- Navbar --}}
       <nav>
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">My Account <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+      </nav>
+
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/profile">profile</a> |
@@ -24,7 +47,7 @@
         {{else}}
         <a href="/login">login</a>
         {{/if}}
-      </nav>
+      
     </header>
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
