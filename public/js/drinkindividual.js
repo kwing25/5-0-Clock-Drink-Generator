@@ -1,0 +1,1 @@
+//create api for 2 search page reusing api with clicked image's strDrink

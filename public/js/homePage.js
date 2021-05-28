@@ -1,21 +1,20 @@
-function getDrinkInfo() {
-    var apiDrink = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + ('margarita');
-    // backgroundPic.setAttribute("class", "content-hide");
+const input = document.querySelector("#homepage-search");
+const button = document.querySelector('#search-btn');
 
-    fetch(apiDrink)
-        .then(function (response) {
-            console.log(response.ok);
-            if (!response.ok) {
-                window.alert('Unable to connect');
-                throw response.json();
-            }
+function handleSearchFormSubmit(event) {
+    event.preventDefault();
+    console.log("works");
+    const searchInputVal = document.querySelector('#homepage-search').value;
+    localStorage.setItem('searchQuery', JSON.stringify(searchInputVal));
 
-            return response.json()
-        })
-        .then(function (drinkResults) {
-            console.log(drinkResults);
-        })
+    if (searchInputVal === "")  {
+        return(handleSearchFormSubmit);
+        }
 
+        document.location.replace('/drinksearch');
 }
 
-getDrinkInfo();
+
+button.addEventListener('click', handleSearchFormSubmit);
+
+// module.exports = { drinkSearch };

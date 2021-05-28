@@ -1,9 +1,18 @@
 
 <div class="jumbotron">
             <h1 class="display-4">Let's Have a Drink!</h1>
-            <p class="lead">Sign up or login to get started.</p>
-            <div class="form-check mb-2 mr-sm-2"></div>
-            <button type="submit" class="btn btn-primary mb-2">Login or Sign-up</button>
+            {{#if logged_in}}
+                    <div class="form-group">
+                    <label for="search-form">Search for a drink:</label>
+                    <input class="form-input" type="text" id="homepage-search" />
+                    <button type="submit" class="btn btn-primary mb-2" id="search-btn">search</button>
+                    </div>
+                    {{else}}
+                    <p class="lead">Sign up or login to get started.</p>
+                    <div class="form-check mb-2 mr-sm-2"></div>
+                    <button type="submit" class="btn btn-primary mb-2">Login or Sign-up</button>
+                  {{/if}}
+            
         </div>
 
 

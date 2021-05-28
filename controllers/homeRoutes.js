@@ -27,6 +27,16 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/drinksearch', (req, res) => {
+  try {
+    res.render ('drinksearch', {
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get('/saveddrink/:id', async (req, res) => {
   try {
     const saveddrinkData = await Saveddrink.findByPk(req.params.id, {
