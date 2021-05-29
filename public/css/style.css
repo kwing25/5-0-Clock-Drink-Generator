@@ -22,3 +22,20 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+
+.drink-image-home {
+  max-height: 200px;
+}
+.drink-image-home-1 {
+  max-height: 200px;
+}
+.drink-image-home-2 {
+  max-height: 200px;
+}
+.drink-image-home-3 {
+  max-height: 200px;
+}
+
+.drink-image-home-4 {
+  max-height: 200px;
+}

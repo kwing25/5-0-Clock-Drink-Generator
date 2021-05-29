@@ -29,19 +29,33 @@ function getDrinkInfo(search) {
 function printDrinkResults(drinkResults){
     console.log(drinkResults)
     // for (let i = 0; i < drinkResults.length; i++) {
-    //     let val = drinkResults[i];
-        console.log(val);
+    //     // let val = drinkResults[i];
+    //     console.log(i);
+        // const cardBody = document.querySelector('.card-body')
+        // const drinkName = document.createElement('.drink-name');
         const drinkName = document.querySelector('.drink-name');
-        drinkName.innerHTML = drinkResults.drinks[val].strDrink;
-    // }
-}
+        drinkName.innerHTML = drinkResults.drinks[0].strDrink;
+        // cardBody.append(drinkName);
+        //const drinkName = document.querySelector('.drink-name');
+        //drinkName.innerHTML = drinkResults.drinks[drink].strDrink;
+    }
+// }
 
 
-// array.forEach(element => {
-    
+// drinkResults.forEach(drink => {
+//     const drinkName = document.querySelector('.drink-name');
+//     drinkName.innerHTML = drinkResults.drinks[drink].strDrink;
 // });
 
+    
+const drinkTarget = document.querySelector('.drink-name');
 
+drinkTarget.addEventListener('click', setItemIndividual);
+
+function setItemIndividual(event) {
+    localStorage.setItem('searchQueryIndividual', JSON.stringify(event))
+    document.location.replace('/drinkindividual');;
+}
 
 
 getParams()

@@ -1,6 +1,6 @@
 
 <div class="jumbotron">
-            <h1 class="display-4">Let's Have a Drink!</h1>
+            <h1 class="display-4">Let's Grab a Drink!</h1>
             {{#if logged_in}}
                     <div class="form-group">
                     <label for="search-form">Search for a drink:</label>
@@ -10,8 +10,8 @@
                     {{else}}
                     <p class="lead">Sign up or login to get started.</p>
                     <div class="form-check mb-2 mr-sm-2"></div>
-                    <button type="submit" class="btn btn-primary mb-2">Login or Sign-up</button>
-                  {{/if}}
+                    <button type="submit" class="btn btn-primary mb-2">Sign-up/Login</button>
+                    {{/if}}
             
         </div>
 
@@ -20,8 +20,21 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-6">Cocktail of the day</div>
-                <div class="col-lg-6">Engineer Cocktail List</div>
+                <div class="col-lg-6">
+                    <h5>Cocktail of the day</h5>
+                    <p class="drink-name-home"></p>
+                    <img class="drink-image-home">
+                </div>
+                <div class="col-lg-6">
+                    <h5>Our Favorites</h5>
+                    <p class="drink-name-home-1"></p>
+                    <img class="drink-image-home-1">
+                    <p class="drink-name-home-2"></p>
+                    <img class="drink-image-home-2">
+                    <p class="drink-name-home-3"></p>
+                    <img class="drink-image-home-3">
+                    <p class="drink-name-home-4"></p>
+                    <img class="drink-image-home-4">
             </div>
         </div>
 
