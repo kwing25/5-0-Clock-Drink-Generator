@@ -1,14 +1,53 @@
-<div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
-</div>
+            <header class="align-content-center">
+                <h4>(Selected Drink Result from Search by Ingredient/Cocktail)</h4>
+            </header>
+
+
+
+            <h5>Drink Title</h5>
+
+
+            <div class="container">
+                <div class="card" style="width: 18rem;"> 
+                  {{!-- <img class="card-img-top" src="..." alt="Card image cap"> --}}
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <div class="col-lg-6">
+                            <div class="drink-ingredients">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+{{!-- 
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6">
+                            <div class="drink-ingredients">
+
+                            </div>
+                        </div> --}}
+
+                        <div class="col-lg-6">
+                            <div class="card" style="width: 18rem;"> 
+                              {{!-- <img class="card-img-top" src="..." alt="Card image cap"> --}}
+                                <div class="card-body">
+                                    <h5 class="card-title">Instructions</h5>
+                                    <p class="card-text"></p>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-primary btn-sm btn-block">Save Cocktail</button>
+                    <p>Your Saved Drinks will appear on your account page</p>
+                </div>
+
+                <script src="/js/drinkIndividual.js"></script>
