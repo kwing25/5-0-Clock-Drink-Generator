@@ -1,47 +1,56 @@
-const newFormHandler = async (event) => {
-  event.preventDefault();
+// const { not } = require("sequelize/types/lib/operators");
 
-  const name = document.querySelector('#saveddrink-name').value.trim();
-  const needed_funding = document.querySelector('#saveddrink-funding').value.trim();
-  const description = document.querySelector('#saveddrink-desc').value.trim();
+// const newFormHandler = async (event) => {
+//   event.preventDefault();
 
-  if (name && needed_funding && description) {
-    const response = await fetch(`/api/saveddrinks`, {
-      method: 'POST',
-      body: JSON.stringify({ name, needed_funding, description }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+//   const name = document.querySelector('#saveddrink-name').value.trim();
+//   const needed_funding = document.querySelector('#saveddrink-funding').value.trim();
+//   const description = document.querySelector('#saveddrink-desc').value.trim();
 
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to create saveddrink');
-    }
-  }
-};
+//   if (name && needed_funding && description) {
+//     const response = await fetch(`/api/saveddrinks`, {
+//       method: 'POST',
+//       body: JSON.stringify({ name, needed_funding, description }),
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//     });
 
-const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
+//     if (response.ok) {
+//       document.location.replace('/profile');
+//     } else {
+//       alert('Failed to create saveddrink');
+//     }
+//   }
+// };
 
-    const response = await fetch(`/api/saveddrinks/${id}`, {
-      method: 'DELETE',
-    });
+// const delButtonHandler = async (event) => {
+//   if (event.target.hasAttribute('data-id')) {
+//     const id = event.target.getAttribute('data-id');
 
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to delete saveddrink');
-    }
-  }
-};
+//     const response = await fetch(`/api/saveddrinks/${id}`, {
+//       method: 'DELETE',
+//     });
 
-document
-  .querySelector('.new-saveddrink-form')
-  .addEventListener('submit', newFormHandler);
+//     if (response.ok) {
+//       document.location.replace('/profile');
+//     } else {
+//       alert('Failed to delete saveddrink');
+//     }
+//   }
+// };
+
+// document
+//   .querySelector('.new-saveddrink-form')
+//   .addEventListener('submit', newFormHandler);
+
 
 // document
 //   .querySelector('.saveddrink-list')
 //   .addEventListener('click', delButtonHandler);
+
+
+const note = document.querySelector('.note-save')
+
+note.value = 'get cups';
+//api fetch when the page loads, note.value = res.note (whatever it is saved as in the database)

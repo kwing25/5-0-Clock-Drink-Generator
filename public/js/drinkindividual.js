@@ -28,7 +28,33 @@ function getDrinkInfo(search) {
 
 }
 
+printDrinkResults = (drinkResults) => {
+    console.log(drinkResults)
+    console.log(drinkResults.drinks[0].strDrink)
+
+    const drinkDiv = document.querySelector('.drink-ingredients')
+
+
+if (drinkResults.drinks[0].strIngredient1 !== null) {
+        const drinkIngredient = document.createElement('li');
+        drinkIngredient.innerHTML = drinkResults.drinks[0].strIngredient1 + ": " + drinkResults.drinks[0].strMeasure1;
+        drinkDiv.append(drinkIngredient);
+} 
+
+if (drinkResults.drinks[0].strIngredient2 !== null) {
+    const drinkIngredient = document.createElement('li');
+    drinkIngredient.innerHTML = drinkResults.drinks[0].strIngredient2;
+    drinkDiv.append(drinkIngredient);
+} 
+
+if (drinkResults.drinks[0].strIngredient4 !== null) {
+    const drinkIngredient = document.createElement('li');
+    drinkIngredient.innerHTML = drinkResults.drinks[0].strIngredient4;
+    drinkDiv.append(drinkIngredient);
+} 
+
+
+}
 
 getParams()
-
 

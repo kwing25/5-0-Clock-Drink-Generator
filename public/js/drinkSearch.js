@@ -28,18 +28,19 @@ function getDrinkInfo(search) {
 
 function printDrinkResults(drinkResults){
     console.log(drinkResults)
-    // for (let i = 0; i < drinkResults.length; i++) {
-    //     // let val = drinkResults[i];
-    //     console.log(i);
+    for (let i = 0; i < drinkResults.drinks.length; i++) {
+        let val = drinkResults.drinks[i];
+        // console.log(i);
         // const cardBody = document.querySelector('.card-body')
-        // const drinkName = document.createElement('.drink-name');
-        const drinkName = document.querySelector('.drink-name');
-        drinkName.innerHTML = drinkResults.drinks[0].strDrink;
+        const drinkDiv = document.querySelector('.drink-name');
+        const drinkName = document.createElement('li');
+        drinkName.innerHTML = val.strDrink;
+        drinkDiv.append(drinkName);
         // cardBody.append(drinkName);
         //const drinkName = document.querySelector('.drink-name');
         //drinkName.innerHTML = drinkResults.drinks[drink].strDrink;
     }
-// }
+}
 
 
 // drinkResults.forEach(drink => {
@@ -53,7 +54,8 @@ const drinkTarget = document.querySelector('.drink-name');
 drinkTarget.addEventListener('click', setItemIndividual);
 
 function setItemIndividual(event) {
-    localStorage.setItem('searchQueryIndividual', JSON.stringify(event))
+    console.log(event)
+    localStorage.setItem('searchQueryIndividual', JSON.stringify(event.target.innerHTML))
     document.location.replace('/drinkindividual');;
 }
 
