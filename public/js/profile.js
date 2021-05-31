@@ -54,3 +54,4 @@ const note = document.querySelector('.note-save')
 
 note.value = 'get cups';
 //api fetch when the page loads, note.value = res.note (whatever it is saved as in the database)
+

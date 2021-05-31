@@ -1,6 +1,19 @@
 const input = document.querySelector("#homepage-search");
 const button = document.querySelector('#search-btn');
 
+//added img target to link to drink
+// const drinkTarget = document.querySelector('.drink-name-home-1');
+
+// drinkTarget.addEventListener('click', setItemIndividual);
+
+// function setItemIndividual(event) {
+//     console.log(event)
+//     localStorage.setItem('searchQueryIndividual', JSON.stringify(event.target.innerHTML))
+//     document.location.replace('/drinkindividual');;
+// }
+
+
+
 function handleSearchFormSubmit(event) {
     event.preventDefault();
     console.log("works");
@@ -47,6 +60,17 @@ cocktailOfTheDay = () => {
         drinkImage.src = drinkResults.drinks[0].strDrinkThumb;
     }
 
+    //add link for wildcard cocktail
+    const drinkTarget = document.querySelector('.drink-name-home');
+
+    drinkTarget.addEventListener('click', setItemIndividual);
+    
+    function setItemIndividual(event) {
+        console.log(event)
+        localStorage.setItem('searchQueryIndividual', JSON.stringify(event.target.innerHTML))
+        document.location.replace('/drinkindividual');
+    }
+
     homePageFavOne = () => {
         var apiDrink = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + ('screwdriver');
         
@@ -73,6 +97,17 @@ cocktailOfTheDay = () => {
         drinkName.innerHTML = drinkResults.drinks[0].strDrink;
         const drinkImage = document.querySelector('.drink-image-home-1')
         drinkImage.src = drinkResults.drinks[0].strDrinkThumb;
+        setItemIndividual()
+    }
+ 
+    const drinkTarget1 = document.querySelector('.drink-name-home-1');
+
+    drinkTarget1.addEventListener('click', setItemIndividual);
+    
+    function setItemIndividual(event) {
+        console.log(event)
+        localStorage.setItem('searchQueryIndividual', JSON.stringify(event.target.innerHTML))
+        document.location.replace('/drinkindividual');
     }
 
     homePageFavTwo = () => {
@@ -103,6 +138,16 @@ cocktailOfTheDay = () => {
         drinkImage.src = drinkResults.drinks[0].strDrinkThumb;
     }
 
+    const drinkTarget2 = document.querySelector('.drink-name-home-2');
+
+    drinkTarget2.addEventListener('click', setItemIndividual);
+    
+    function setItemIndividual(event) {
+        console.log(event)
+        localStorage.setItem('searchQueryIndividual', JSON.stringify(event.target.innerHTML))
+        document.location.replace('/drinkindividual');
+    }
+
     homePageFavThree = () => {
         var apiDrink = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + ('manhattan');
         
@@ -131,6 +176,16 @@ cocktailOfTheDay = () => {
         drinkImage.src = drinkResults.drinks[0].strDrinkThumb;
     }
 
+    const drinkTarget3 = document.querySelector('.drink-name-home-3');
+
+    drinkTarget3.addEventListener('click', setItemIndividual);
+    
+    function setItemIndividual(event) {
+        console.log(event)
+        localStorage.setItem('searchQueryIndividual', JSON.stringify(event.target.innerHTML))
+        document.location.replace('/drinkindividual');
+    }
+
     homePageFavFour = () => {
         var apiDrink = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + ('mojito');
         
@@ -157,6 +212,16 @@ cocktailOfTheDay = () => {
         drinkName.innerHTML = drinkResults.drinks[0].strDrink;
         const drinkImage = document.querySelector('.drink-image-home-4')
         drinkImage.src = drinkResults.drinks[0].strDrinkThumb;
+    }
+
+    const drinkTarget4 = document.querySelector('.drink-name-home-4');
+
+    drinkTarget4.addEventListener('click', setItemIndividual);
+    
+    function setItemIndividual(event) {
+        console.log(event)
+        localStorage.setItem('searchQueryIndividual', JSON.stringify(event.target.innerHTML))
+        document.location.replace('/drinkindividual');
     }
 
 
