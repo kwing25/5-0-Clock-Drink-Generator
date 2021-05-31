@@ -51,7 +51,32 @@
 
 
 const note = document.querySelector('.note-save')
+const noteBtn =  document.querySelector('#noteSaveButtonThisIs')
+// note.value = 'get cups';
 
-note.value = 'get cups';
+function saveNoteAPICall(){
+    let entry = {
+        value: note.value
+    }
+    fetch('/api/notes/new', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(entry)
+    })
+        .then(data => data.json())
+        .then(res => console.log(res))
+}
+function loadNotes(){
+    fetch('/api/notes')
+        .then(res => res.json())
+        .then(data => {
+            //here lies the array of notes from, per user
+            console.log(data)
+        })
+}
+loadNotes()
+noteBtn.addEventListener("click", saveNoteAPICall)
 //api fetch when the page loads, note.value = res.note (whatever it is saved as in the database)
 
