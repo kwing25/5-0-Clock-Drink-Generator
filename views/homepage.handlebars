@@ -17,6 +17,7 @@
 
 
         <!--	Cocktail of the day cards/images-->
+        {{#if logged_in}}
         <div class="container">
 
             <div class="row">
@@ -37,9 +38,10 @@
                     <img class="drink-image-home-4">
             </div>
         </div>
+        {{/if}}
 
         <!--	Side Cars-->
-        <div clas="container">
+        {{!-- <div clas="container">
 
             <header class="align-content-center">
                 <h4>Side Car</h4>
@@ -51,7 +53,7 @@
             </div>
 
         </div>
-        </div>
+        </div> --}}
 
 
 <script src="/js/homePage.js"></script>

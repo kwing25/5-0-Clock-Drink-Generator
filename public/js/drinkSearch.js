@@ -1,8 +1,6 @@
 function getParams(search) {
     var search = JSON.parse(localStorage.getItem('searchQuery'));
     console.log(search);
-    
-
     getDrinkInfo(search);
 }
 
@@ -56,7 +54,7 @@ drinkTarget.addEventListener('click', setItemIndividual);
 function setItemIndividual(event) {
     console.log(event)
     localStorage.setItem('searchQueryIndividual', JSON.stringify(event.target.innerHTML))
-    document.location.replace('/drinkindividual');;
+    document.location.replace('/drinkindividual');
 }
 
 
