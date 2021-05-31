@@ -8,19 +8,46 @@
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
 
+
 </head>
 
 <body>
 
   <div class="flex-column justify-space-around">
 
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <a href="/">Five O'clock Somewhere</a>
+    <header class="display-flex justify-space-between align-center p-2" id="DrinkAppHeader">
+      <h1 id="websiteheader">
+        <a href="#">Five O'clock Somewhere</a>
       </h1>
+    </header>
 
       {{!-- Navbar --}}
       <nav>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+                    </li>
+                    {{#if logged_in}}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/profile">My Account <span class="sr-only"></span></a>
+                    </li>
+                    <button class="no-button" id="logout">logout</button>
+                    {{else}}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/login">Login <span class="sr-only"></span></a>
+                    </li>
+                  {{/if}}
+                </ul>
+            </div>
+      </nav> 
+  </div>
+
+{{!-- <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,23 +56,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    {{#if logged_in}}
                     <li class="nav-item active">
-                        <a class="nav-link" href="/profile">My Account <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">My Account <span class="sr-only">(current)</span></a>
                     </li>
-                    <button class="no-button" id="logout">logout</button>
-                    {{else}}
                     <li class="nav-item active">
-                        <a class="nav-link" href="/login">Login <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
                     </li>
-                  {{/if}}
                 </ul>
             </div>
-      </nav> 
-    </header>
-
+        </nav>
+ --}}
 
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
