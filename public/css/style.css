@@ -1,15 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Comfortaa:wght@300;400;500;600;700&family=Fredericka+the+Great&family=Limelight&family=Original+Surfer&family=Poiret+One&family=Special+Elite&display=swap');
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+
 
 /* header,
 .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 } */
 
-body {
+
+
+/* Main*/
+
+div#mainpage {
   font-family: 'Abel', sans-serif;
-  background: #7ab1db;
+  background-color: #f3cd05;
   animation: pulse 5s;
-  color: #fff9fc;
+
 }
 
 @keyframes pulse {
@@ -26,19 +32,46 @@ header#DrinkAppHeader.display-flex.justify-space-between.align-center.p-2 {
   background-color: #f49f05;
 }
 
-h1#websiteheader {
+h1#websiteheader a {
+  color: #1b89bc;
   font-family: 'Original Surfer', cursive;
+  text-decoration: none;
 }
 
-.jumbotron {
+
+nav {}
+
+
+
+
+/* Homepage */
+
+div.jumbotron {
+  display: flex;
+  padding-bottom: 2px;
+  margin: 1px;
   background: url("https://www.publicdomainpictures.net/pictures/30000/nahled/drink-on-beach.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 400px;
+  width: 100%;
+  border-radius: 5px;
 }
 
-nav {}
+div#lets-grab-a-drink.container {
+  min-height: 400px;
+  padding: 17px;
+  margin: 3px;
+}
+
+/* div#cocktails-section.container {
+  
+} */
+
+div.row {
+  padding: 10px;
+}
+
 
 .no-button {
   background: none;
@@ -61,24 +94,49 @@ nav {}
   margin-left: -5px;
 } */
 
+.drink-card {
+  justify-content: center;
+}
+
 .drink-image-home {
   max-height: 200px;
 }
 
 .drink-image-home-1 {
-  max-height: 200px;
+  max-height: 300px;
+  max-width: 300px;
+  border-radius: 10px;
 }
 
 .drink-image-home-2 {
-  max-height: 200px;
+  max-height: 300px;
+  max-width: 300px;
+  border-radius: 10px;
 }
 
 .drink-image-home-3 {
-  max-height: 200px;
+  max-height: 300px;
+  max-width: 300px;
+  border-radius: 10px;
 }
 
 .drink-image-home-4 {
-  max-height: 200px;
+  max-height: 300px;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.drink-image {
+  max-height: 600px;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+  img.drink-image {
+    max-height: 250px;
+  }
 }
 
 

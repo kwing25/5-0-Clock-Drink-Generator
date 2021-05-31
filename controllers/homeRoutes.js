@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Saveddrink, User } = require('../models');
+const { Saveddrink, User, Note } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -79,7 +79,8 @@ router.get('/profile', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-
+    // const noteData = await 
+    
     res.render('profile', {
       ...user,
       logged_in: true
