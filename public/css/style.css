@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Comfortaa:wght@300;400;500;600;700&family=Fredericka+the+Great&family=Limelight&family=Original+Surfer&family=Poiret+One&family=Special+Elite&display=swap');
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+
 
 /* header,
 .project:not(:last-child) {
@@ -38,7 +40,6 @@ h1#websiteheader {
   min-height: 400px;
 }
 
-nav {}
 
 .no-button {
   background: none;
