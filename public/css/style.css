@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Comfortaa:wght@300;400;500;600;700&family=Fredericka+the+Great&family=Limelight&family=Original+Surfer&family=Poiret+One&family=Special+Elite&display=swap');
 @import url('../node_modules/font-awesome/css/font-awesome.min.css');
-
+@import url("hover.css");
 
 /* header,
 .project:not(:last-child) {
@@ -8,14 +8,14 @@
 } */
 
 
+/* Main */
 
-/* Main*/
+body {}
 
-div#mainpage {
+div#all-pages {
   font-family: 'Abel', sans-serif;
   background-color: #f3cd05;
   animation: pulse 5s;
-
 }
 
 @keyframes pulse {
@@ -35,12 +35,44 @@ header#DrinkAppHeader.display-flex.justify-space-between.align-center.p-2 {
 h1#websiteheader a {
   color: #1b89bc;
   font-family: 'Original Surfer', cursive;
+  text-shadow: 0 0 1px #FF0000, 0 0 2px #0000FF;
   text-decoration: none;
 }
 
-
 nav {}
 
+#mainsitenav a {
+  color: #000;
+  text-decoration: none;
+}
+
+#mainsitenav a:hover {
+  color: #1b89bc;
+  font-family: 'Limelight', cursive;
+  font-size: 1.2em;
+  letter-spacing: 3px;
+  line-height: .75em;
+  text-decoration: none;
+}
+
+/* #mainsitenav a::before {
+  content: '';
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/chris.jpg');
+  background-position: 0 30%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  bottom: 0vh;
+  width: 100vw;
+  transform: translateY(100%);
+  transition: transform .3s;
+}
+
+#mainsitenav a:hover::before {
+  transform: translateY(0px);
+} */
 
 
 
@@ -64,16 +96,9 @@ div#lets-grab-a-drink.container {
   margin: 3px;
 }
 
-/* div#cocktails-section.container {
-  
-} */
-
-div.row {
-  padding: 10px;
-}
 
 
-.no-button {
+button#logout.no-button {
   background: none;
   border: none;
   padding: 0;
@@ -86,44 +111,65 @@ div.row {
 .no-button:hover {
   color: #065b83;
   text-decoration: underline;
+  font-style: initial;
 }
 
-/* .dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
-} */
+
+.display-4 {
+  color: whitesmoke;
+  text-shadow: 0 2px 3px #FF0000;
+}
+
+label {
+  text-shadow: 0 1px 3px #cf6969;
+}
+
+label:hover {
+  color: whitesmoke;
+}
+
+/* Cocktail of the Day/Favorites Cards */
+div.row {
+  padding: 10px;
+}
 
 .drink-card {
   justify-content: center;
 }
 
 .drink-image-home {
-  max-height: 200px;
+  max-height: 300px;
+  max-width: 300px;
+  border-radius: 15px;
+  padding: 5px;
 }
 
 .drink-image-home-1 {
   max-height: 300px;
   max-width: 300px;
   border-radius: 10px;
+  padding: 3px;
 }
 
 .drink-image-home-2 {
   max-height: 300px;
   max-width: 300px;
   border-radius: 10px;
+  padding: 3px;
 }
 
 .drink-image-home-3 {
   max-height: 300px;
   max-width: 300px;
   border-radius: 10px;
+  padding: 3px;
 }
 
 .drink-image-home-4 {
   max-height: 300px;
   max-width: 300px;
   border-radius: 10px;
+  padding: 3px;
 }
 
 .drink-image {
@@ -131,6 +177,64 @@ div.row {
   max-width: 600px;
   border-radius: 10px;
 }
+
+h5.wildcard {
+  font-family: 'Fredericka the Great', cursive;
+  text-shadow: 0 0 3px #FF0000;
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  padding: 2px;
+}
+
+p.drink-name-home {
+  font-family: 'Poiret One', cursive;
+  color: white;
+  text-shadow: 0 0 3px #863434;
+  font-size: 27px;
+  padding: 2px;
+}
+
+h5.favorites {
+  font-family: 'Limelight', cursive;
+  text-shadow: 0 0 3px #FF0000;
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  padding: 2px;
+}
+
+p.drink-name-home-1 {
+  font-size: 24px;
+  padding: 6px;
+}
+
+p.drink-name-home-1:hover {
+  color: #ca4242;
+}
+
+p.drink-name-home-2 {
+  font-size: 24px;
+  padding: 6px;
+}
+
+p.drink-name-home-3 {
+  font-size: 24px;
+  padding: 6px;
+}
+
+p.drink-name-home-4 {
+  font-size: 24px;
+  padding: 6px;
+}
+
+/* Profile Page */
+/* div#profile-page {
+  background-color: #f3cd05;
+} */
+
+
+
 
 
 @media screen and (max-width: 768px) {

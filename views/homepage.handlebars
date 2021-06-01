@@ -1,12 +1,11 @@
-
-<div class="jumbotron">
-    <div class="container" id="lets-grab-a-drink">
+    <div class="jumbotron">
+        <div class="container" id="lets-grab-a-drink">
             <h1 class="display-4">Let's Grab a Drink!</h1>
             {{#if logged_in}}
                     <div class="form-group">
                     <label for="search-form">Search for a drink:</label>
                     <input class="form-input" type="text" id="homepage-search" />
-                    <button type="submit" class="btn btn-primary mb-2" id="search-btn">search</button>
+                    <button type="submit" class="btn btn-primary mb-2" id="search-btn">search <i class="fas fa-arrow-right hvr-icon-forward"></i></button>
                     </div>
                     {{else}}
                     <p class="lead">Sign up or login to get started.</p>
@@ -24,13 +23,13 @@
             <div class="row">
                 <div class="col-lg-6">
                     <h5 class="wildcard">Wildcard Cocktail</h5>
-                    <p class="drink-name-home"></p>
+                    <p class="drink-name-home hvr-grow-shadow"></p>
                     <img class="drink-image-home">
                 </div>
                 <div class="col-lg-6">
-                    <h5>Our Favorites</h5>
+                    <h5 class="favorites">Our Favorites</h5>
                     <div class="drink-card">
-                    <p class="drink-name-home-1"></p>
+                    <p class="drink-name-home-1 hvr-bounce-in"></p>
                     <img class="drink-image-home-1">
                     </div>
                     <div class="drink-card">
