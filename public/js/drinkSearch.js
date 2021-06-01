@@ -28,23 +28,20 @@ function printDrinkResults(drinkResults){
     console.log(drinkResults)
     for (let i = 0; i < drinkResults.drinks.length; i++) {
         let val = drinkResults.drinks[i];
-        // console.log(i);
-        // const cardBody = document.querySelector('.card-body')
+        //make a seperate div for drink image
         const drinkDiv = document.querySelector('.drink-name');
         const drinkName = document.createElement('li');
         drinkName.innerHTML = val.strDrink;
+        const drinkImg = document.createElement('img');
+        drinkImg.src = val.strDrinkThumb;
         drinkDiv.append(drinkName);
-        // cardBody.append(drinkName);
-        //const drinkName = document.querySelector('.drink-name');
-        //drinkName.innerHTML = drinkResults.drinks[drink].strDrink;
+        drinkDiv.append(drinkImg);
+        
     }
 }
 
 
-// drinkResults.forEach(drink => {
-//     const drinkName = document.querySelector('.drink-name');
-//     drinkName.innerHTML = drinkResults.drinks[drink].strDrink;
-// });
+
 
     
 const drinkTarget = document.querySelector('.drink-name');
@@ -60,7 +57,3 @@ function setItemIndividual(event) {
 
 getParams()
 
-// for (let index = 0; index < array.length; index++) {
-//     const element = array[index];
-    
-// }
