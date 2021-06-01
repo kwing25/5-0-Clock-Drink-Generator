@@ -1,4 +1,3 @@
-//create api for 2 search page reusing api with clicked image's strDrink
 function getParams(search) {
     var search = JSON.parse(localStorage.getItem('searchQueryIndividual'));
     console.log(search);
@@ -44,33 +43,77 @@ drinkInstructions.innerHTML= drinkResults.drinks[0].strInstructions;
 
 if (drinkResults.drinks[0].strIngredient1 !== null) {
         const drinkIngredient = document.createElement('li');
-        drinkIngredient.innerHTML = drinkResults.drinks[0].strIngredient1 + ": " + drinkResults.drinks[0].strMeasure1;
+        drinkIngredient.innerHTML = drinkResults.drinks[0].strIngredient1;
         drinkDiv.append(drinkIngredient);
-              
+
 } 
 
 if (drinkResults.drinks[0].strIngredient2 !== null) {
     const drinkIngredient = document.createElement('li');
-    drinkIngredient.innerHTML = drinkResults.drinks[0].strIngredient2 + ": " + drinkResults.drinks[0].strMeasure2;
+    drinkIngredient.innerHTML = drinkResults.drinks[0].strIngredient2;
     drinkDiv.append(drinkIngredient);
 } 
 
 if (drinkResults.drinks[0].strIngredient3 !== null) {
     const drinkIngredient = document.createElement('li');
-    drinkIngredient.innerHTML = drinkResults.drinks[0].strIngredient3 + ": " + drinkResults.drinks[0].strMeasure3;
+    drinkIngredient.innerHTML = drinkResults.drinks[0].strIngredient3;
+    drinkDiv.append(drinkIngredient);
+} 
+
+if (drinkResults.drinks[0].strIngredient4 !== null) {
+    const drinkIngredient = document.createElement('li');
+    drinkIngredient.innerHTML = drinkResults.drinks[0].strIngredient4;
+    drinkDiv.append(drinkIngredient);
+} 
+
+if (drinkResults.drinks[0].strIngredient5 !== null) {
+    const drinkIngredient = document.createElement('li');
+    drinkIngredient.innerHTML = drinkResults.drinks[0].strIngredient5;
+    drinkDiv.append(drinkIngredient);
+} 
+
+if (drinkResults.drinks[0].strIngredient6 !== null) {
+    const drinkIngredient = document.createElement('li');
+    drinkIngredient.innerHTML = drinkResults.drinks[0].strIngredient6;
     drinkDiv.append(drinkIngredient);
 } 
 
 
 }
 
+
+
+const drinkSaveHandler = async (event) => {
+    event.preventDefault();
+
+    const drinkSave = localStorage.getItem('searchQueryIndividual');
+    console.log(drinkSave);
+
+    if (drinkSave) {
+        const response = await fetch(`/api/saveddrinks`, {
+        method: 'POST',
+        body: JSON.stringify({ drinkSave }),
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        });
+        
+        if (response.ok) {
+        document.location.replace('/profile');
+        } else {
+        alert('Failed to create project');
+        }
+    }
+    };
+
+
 const saveDrinkbtn = document.querySelector("#save-drink")
 saveDrinkbtn.addEventListener("click", saveDrink)
 
 function saveDrink(event) {
     console.log(event)
-    localStorage.setItem('searchQueryIndividual', JSON.stringify(event.target.innerHTML))
-    
+    // localStorage.setItem('searchQueryIndividual', JSON.stringify(event.target.innerHTML))
+    drinkSaveHandler(event)
 }
 
 getParams()

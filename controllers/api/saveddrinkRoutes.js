@@ -4,8 +4,10 @@ const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
   try {
+    console.log(req.body)
+    const drink = JSON.parse(req.body.drinkSave)
     const newSaveddrink = await Saveddrink.create({
-      ...req.body,
+      drink_name: drink,
       user_id: req.session.user_id,
     });
 

@@ -69,20 +69,26 @@ router.get('/saveddrink/:id', async (req, res) => {
   }
 });
 
-// Use withAuth middleware to prevent access to route
+//
+// HOW TO ALSO GET SAVEDDRINK
+//
+
+
 router.get('/profile', withAuth, async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
+    
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: Saveddrink }],
     });
 
     const user = userData.get({ plain: true });
-    // const noteData = await 
+    const saveddrinks = user.Saveddrinks;
+    console.log(saveddrinks);
+    
     
     res.render('profile', {
-      ...user,
+      ...user, saveddrinks,
       logged_in: true
     });
   } catch (err) {

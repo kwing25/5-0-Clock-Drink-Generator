@@ -7,7 +7,7 @@
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-lg-6">
+                        {{!-- <div class="col-lg-6">
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
 
@@ -18,20 +18,19 @@
                                     class="btn btn-outline-secondary" type="button" id="noteSaveButtonThisIs">Save
                                     Note</button>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="col-lg-6">My Cocktails
                             <div class="list-group">
                                 {{!-- {{#each notes}}
                                     <p>{{note_description}}</p>
                                 {{/each}} --}}
-                                <a href="#" class="list-group-item list-group-item-action active">Cocktail Link 1</a>
-                                <button class="delete-button">delete</button>
-                                <a href="#" class="list-group-item list-group-item-action">Cocktail Link 2</a>
-                                <button class="delete-button">delete</button>
-                                <a href="#" class="list-group-item list-group-item-action">Cocktail Link 3</a>
-                                <button class="delete-button">delete</button>
-                                <a href="#" class="list-group-item list-group-item-action">Cocktail Link 4</a>
-                                <button class="delete-button">delete</button>
+
+                                <div class="drink-name">
+                                {{#each saveddrinks}}
+                                    <button>{{drink_name}}</button>
+                                    <button class="delete-button" data-id="{{id}}">delete</button>
+                                {{/each}}
+                                </div>
                             </div>
                         </div>
 
