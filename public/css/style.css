@@ -10,14 +10,15 @@
 
 /* Main */
 
-body {}
+#mainpage {
+  width: 100vw;
+  height: 100vh;
+}
 
-
-
-div#all-pages {
+.main {
   font-family: 'Abel', sans-serif;
-  background-color: #f18904;
-  animation: pulse 10s;
+  background-color: #f3cd05;
+  animation: pulse 5s;
 }
 
 @keyframes pulse {
@@ -30,38 +31,31 @@ div#all-pages {
   }
 }
 
-header#DrinkAppHeader.display-flex.justify-space-between.align-center.p-2 {
-  background: rgb(243,205,5);
-background: linear-gradient(90deg, rgba(243,205,5,1) 5%, rgba(241,137,4,1) 95%);
+
+header#DrinkAppHeader.display-flex.align-center.p-2 {
+  background-color: #f49f05;
 }
+
 
 
 h1#websiteheader a {
   color: #1b89bc;
+  font-size: 50px;
   font-family: 'Original Surfer', cursive;
-  /* text-shadow: 0px 2px 2px black; */
   text-decoration: none;
-  font-weight: bold;
-  /* animation: moveInRight 1s ease-out; */
+  animation: glow 1s ease-in-out infinite alternate;
 }
 
-/* @keyframes moveInRight {
-  0% {
-      opacity: 0;
-      transform: translateX(100px);
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
   }
 
-  70% {
-      transform: translateX(0px);
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
+}
 
-  100% {
-      opacity: 1;
-      transform: translate(0);
-  }
-} */
-
-nav {}
 
 #mainsitenav a {
   color: #000;
@@ -97,7 +91,41 @@ nav {}
   transform: translateY(0px);
 } */
 
+* Bottom Nav */ nav.bottom-nav {
+  background-color: #065b83;
+  width: 100%;
+}
 
+ul.navbar {
+  list-style-type: none;
+  justify-content: flex-start;
+
+}
+
+li.nav-item a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+li.nav-item a:hover {
+  color: #f49f05;
+  text-decoration: none;
+}
+
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1b89bc;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.no-button:hover {
+  color: #065b83;
+  text-decoration: underline;
+}
 
 
 /* Homepage */
@@ -154,7 +182,37 @@ label:hover {
 
 /* Cocktail of the Day/Favorites Cards */
 div.row {
-  padding: 10px;
+  padding: 18px;
+  justify-content: center;
+}
+
+
+div#wildcardcocktailsection.col-lg-6 {
+  height: 100vh;
+  background: url("https://cdn.stocksnap.io/img-thumbs/960w/sparks-sparkler_L6BUD1V0U3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5px;
+  padding: 25px;
+  justify-content: space-around;
+  padding: 30px;
+  margin-right: 40px;
+}
+
+div#ourfavoritessection.col-lg-6 {
+  height: 100vh;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/7/7f/Sea_blue_yellow_sun.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5px;
+  padding: 25px;
+  margin-left: 30px;
 }
 
 .drink-card {
@@ -272,6 +330,48 @@ p.drink-name-home-4 {
   background-color: #f3cd05;
 } */
 
+
+/* Login page */
+
+#loginpage {
+  width: 100vw;
+  height: 100vh;
+}
+
+
+/* Profile page */
+
+#profile {
+  width: 100vw;
+  height: 100vh;
+}
+
+
+
+/* Drink results page */
+
+#drinksearch {
+  width: 100vw;
+  height: 100vh;
+}
+
+.card-body {
+  width: fit-content;
+  height: fit-content;
+}
+
+div.drink-name li {
+  text-decoration: none;
+  list-style-type: decimal;
+}
+
+
+/* Drink individual page */
+
+#drinkindividualpage {
+  width: 100vw;
+  height: 100vh;
+}
 
 
 

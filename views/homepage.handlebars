@@ -1,67 +1,69 @@
-    <div class="jumbotron">
-        <div class="container" id="lets-grab-a-drink">
-            <h1 class="display-4">Let's Grab a Drink!</h1>
-            {{#if logged_in}}
-                    <div class="form-group">
-                    <label for="search-form">Search for a drink:</label>
-                    <input class="form-input" type="text" id="homepage-search" />
-                    <button type="submit" class="btn btn-primary mb-2" id="search-btn">search <i class="fas fa-arrow-right hvr-icon-forward"></i></button>
-                    </div>
-                    {{else}}
-                    <p class="lead">Sign up or login to get started.</p>
-                    <div class="form-check mb-2 mr-sm-2"></div>
-                    <a href="/login" type="submit" class="btn btn-primary mb-2">Sign-up/Login</a>
-                    {{/if}}
-            </div>
-        </div>
+<div class="container" id="homepage">
 
-
-        <!--	Cocktail of the day cards/images-->
+<div class="jumbotron">
+    <div class="container" id="lets-grab-a-drink">
+        <h1 class="display-4">Let's Grab a Drink!</h1>
         {{#if logged_in}}
-        <div class="container" id="cockatils-section">
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <h5 class="wildcard">Wildcard Cocktail</h5>
-                    <p class="drink-name-home hvr-grow-shadow"></p>
-                    <img class="drink-image-home">
-                </div>
-                <div class="col-lg-6">
-                    <h5 class="favorites">Our Favorites</h5>
-                    <div class="drink-card">
-                    <p class="drink-name-home-1 hvr-grow-shadow"></p>
-                    <img class="drink-image-home-1">
-                    </div>
-                    <div class="drink-card">
-                    <p class="drink-name-home-2 hvr-grow-shadow"></p>
-                    <img class="drink-image-home-2">
-                    </div>
-                    <div class="drink-card">
-                    <p class="drink-name-home-3 hvr-grow-shadow"></p>
-                    <img class="drink-image-home-3">
-                    </div>
-                    <div class="drink-card">
-                    <p class="drink-name-home-4 hvr-grow-shadow"></p>
-                    <img class="drink-image-home-4">
-                    </div>
-            </div>
+        <div class="form-group">
+            <label for="search-form">Search for a drink:</label>
+            <input class="form-input" type="text" id="homepage-search" />
+            <button type="submit" class="btn btn-primary mb-2" id="search-btn">search</button>
         </div>
+        {{else}}
+        <p class="lead">Sign up or login to get started.</p>
+        <div class="form-check mb-2 mr-sm-2"></div>
+        <a href="/login" type="submit" class="btn btn-primary mb-2">Sign-up/Login</a>
         {{/if}}
+    </div>
+</div>
 
-        <!--	Side Cars-->
-        {{!-- <div clas="container">
 
-            <header class="align-content-center">
-                <h4>Side Car</h4>
-            </header>
+<!--	Cocktail of the day cards/images-->
+{{#if logged_in}}
+<div class="container" id="cockatils-section">
 
-            <div class="row">
-                <div class="col-lg-6">side car 1</div>
-                <div class="col-lg-6">side car 2</div>
-            </div>
-
+    <div class="row">
+        <div class="col-lg-6" id="wildcardcocktailsection">
+            <h5 class="wildcard">Wildcard Cocktail</h5>
+            <p class="drink-name-home"></p>
+            <img class="drink-image-home">
         </div>
-        </div> --}}
+        <div class="col-lg-6" id="ourfavoritessection">
+            <h5 class="favorites">Our Favorites</h5>
+            <div class="drink-card">
+                <p class="drink-name-home-1"></p>
+                <img class="drink-image-home-1">
+            </div>
+            <div class="drink-card">
+                <p class="drink-name-home-2"></p>
+                <img class="drink-image-home-2">
+            </div>
+            <div class="drink-card">
+                <p class="drink-name-home-3"></p>
+                <img class="drink-image-home-3">
+            </div>
+            <div class="drink-card">
+                <p class="drink-name-home-4"></p>
+                <img class="drink-image-home-4">
+            </div>
+        </div>
+    </div>
+    {{/if}}
 
+    <!--	Side Cars-->
+    {{!-- <div clas="container">
 
+        <header class="align-content-center">
+            <h4>Side Car</h4>
+        </header>
+
+        <div class="row">
+            <div class="col-lg-6">side car 1</div>
+            <div class="col-lg-6">side car 2</div>
+        </div>
+
+    </div>
+</div> --}}
+
+</div>
 <script src="/js/homePage.js"></script>
