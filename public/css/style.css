@@ -30,36 +30,25 @@ div#all-pages {
   }
 }
 
-header#DrinkAppHeader.display-flex.justify-space-between.align-center.p-2 {
-  background: rgb(243,205,5);
-background: linear-gradient(90deg, rgba(243,205,5,1) 5%, rgba(241,137,4,1) 95%);
-}
-
-
 h1#websiteheader a {
   color: #1b89bc;
+  font-size: 50px;
   font-family: 'Original Surfer', cursive;
-  /* text-shadow: 0px 2px 2px black; */
   text-decoration: none;
-  font-weight: bold;
-  /* animation: moveInRight 1s ease-out; */
+  animation: glow 1s ease-in-out infinite alternate;
 }
 
-/* @keyframes moveInRight {
-  0% {
-      opacity: 0;
-      transform: translateX(100px);
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
   }
 
-  70% {
-      transform: translateX(0px);
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
+}
 
-  100% {
-      opacity: 1;
-      transform: translate(0);
-  }
-} */
+
 
 nav {}
 
