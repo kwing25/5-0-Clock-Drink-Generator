@@ -1,4 +1,6 @@
 const router = require('express').Router();
+const compression = require('compression')
+
 
 const apiRoutes = require('./api');
 const homeRoutes = require('./homeRoutes');

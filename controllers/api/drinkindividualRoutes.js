@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Saveddrink } = require('../../models');
 const withAuth = require('../../utils/auth');
-
+const compression = require('compression')
 
 
 // router.get('/drinkindividual', withAuth, (req, res) => {

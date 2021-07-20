@@ -6,6 +6,7 @@ const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 
 const sequelize = require('./config/connection');
+const compression = require('compression');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
@@ -27,6 +28,7 @@ const sess = {
 app.use(session(sess));
 
 // Inform Express.js on which template engine to use
+app.use(compression())
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
