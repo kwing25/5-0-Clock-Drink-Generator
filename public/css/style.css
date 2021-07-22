@@ -10,12 +10,8 @@
 
 /* Main */
 
-#mainpage {
-  width: 100vw;
+#all-pages {
   height: 100vh;
-}
-
-.main {
   font-family: 'Abel', sans-serif;
   background-color: #f3cd05;
   animation: pulse 5s;
@@ -91,7 +87,7 @@ h1#websiteheader a {
   transform: translateY(0px);
 } */
 
-* Bottom Nav */ nav.bottom-nav {
+nav.bottom-nav {
   background-color: #065b83;
   width: 100%;
 }
@@ -128,7 +124,6 @@ li.nav-item a:hover {
 }
 
 
-/* Homepage */
 
 div.jumbotron {
   display: flex;
@@ -326,10 +321,15 @@ p.drink-name-home-4 {
 }
 
 /* Profile Page */
-/* div#profile-page {
-  background-color: #f3cd05;
-} */
+div#profile-page {
+  height: 100vh;
 
+}
+
+/* Drink Search Page */
+div#drinksearch-page {
+  height: 100vh;
+}
 
 /* Login page */
 
@@ -340,11 +340,11 @@ p.drink-name-home-4 {
 
 
 /* Profile page */
-
+/* 
 #profile {
   width: 100vw;
   height: 100vh;
-}
+} */
 
 
 
@@ -384,15 +384,6 @@ div.drink-name li {
 
 
 
-/* Fonts- */
-/* font-family: 'Abel', sans-serif;
-font-family: 'Comfortaa', cursive;
-font-family: 'Fredericka the Great', cursive;
-font-family: 'Limelight', cursive;
-font-family: 'Original Surfer', cursive;
-font-family: 'Poiret One', cursive;
-font-family: 'Special Elite', cursive; */
-
 .drink-name {
   list-style: none;
 }
@@ -411,3 +402,13 @@ button.delete-button {
   border: none;
   background: none;
 }
+
+
+/* Fonts- */
+/* font-family: 'Abel', sans-serif;
+font-family: 'Comfortaa', cursive;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Limelight', cursive;
+font-family: 'Original Surfer', cursive;
+font-family: 'Poiret One', cursive;
+font-family: 'Special Elite', cursive; */
