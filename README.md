@@ -8,13 +8,15 @@
 
 ## Table of Contents
 
-1. [Title](#title)
-2. [Description](#Description)
-3. [Installation](#Installation)
-4. [Technologies](#Technologies)
-5. [Contributors](#Contributors)
-6. [Steps](#Steps)
-7. [Screenshot](#Screenshot)
+- [5-O-Clock-Drink-Generator](#5-o-clock-drink-generator)
+  - [Table of Contents](#table-of-contents)
+- [Description](#description)
+- [Installation](#installation)
+  - [Links](#links)
+- [Technologies](#technologies)
+- [Contributors](#contributors)
+- [Steps](#steps)
+    - [5-O'Clock Screenshot](#5-oclock-screenshot)
 
 # Description
 
@@ -26,10 +28,8 @@
 
 ## Links
 
-- Github:https://github.com/kwing25/5-0-Clock-Drink-Generator
-- Heroku:
-
--
+- [Github](https://github.com/kwing25/5-0-Clock-Drink-Generator)
+- [Heroku](https://pure-plains-23888.herokuapp.com/)
 
 # Technologies
 
