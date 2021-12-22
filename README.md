@@ -53,6 +53,8 @@ A website where a user can find a drink based off the drinks name, ingredients i
 
 Janee Artis, Melanie Elson, Jake Studer, Kendra Wing
 
+<table><tr><td align="center" valign="top" width="140"><a href="github.com/kwing25"><img src="https://avatars.githubusercontent.com/u/78707448?v=4" width="100px;" alt="Kendra Wing"/><br /><sup><b>Kendra Wing</b></sup></a><br /> </td></tr></table>
+
 ## Steps
 
 - User is presented with website and must log in or sign up in order to view or search for drinks
