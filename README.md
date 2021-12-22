@@ -57,7 +57,7 @@ Janee Artis, Melanie Elson, Jake Studer, Kendra Wing
   <tr>
     <td align="center" valign="top" width="140"><a href="https://github.com/janeeart"><img src="https://avatars.githubusercontent.com/u/78391244?v=4" width="100px;" alt="Janee Artis"/><br /><sup><b>Janee Artis</b></sup></a><br /> </td>
         <td align="center" valign="top" width="140"><a href="https://github.com/MelElson"><img src="https://avatars.githubusercontent.com/u/76493774?v=4" width="100px;" alt="Melanie Elson"/><br /><sup><b>Melanie Elson</b></sup></a><br /> </td>
-    <td align="center" valign="top" width="140"><a href="github.com/kwing25"><img src="https://avatars.githubusercontent.com/u/78707448?v=4" width="100px;" alt="Kendra Wing"/><br /><sup><b>Kendra Wing</b></sup></a><br /> </td>
+
     <td align="center" valign="top" width="140"><a href="github.com/kwing25"><img src="https://avatars.githubusercontent.com/u/78707448?v=4" width="100px;" alt="Kendra Wing"/><br /><sup><b>Kendra Wing</b></sup></a><br /> </td>
   </tr>
 </table>
